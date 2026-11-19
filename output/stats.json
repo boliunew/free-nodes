@@ -1,25 +1,105 @@
 {
-  "updated": "2026-11-19 16:27 UTC",
-  "candidates": 6000,
+  "updated": "2026-11-19 16:34 UTC",
+  "candidates": 8655,
+  "alive_total": 837,
   "alive": 200,
-  "fastest_ms": 58,
-  "median_ms": 218,
+  "global_nodes": 200,
+  "global_countries": {
+    "🇳🇱 荷兰": 73,
+    "🇩🇪 德国": 39,
+    "🇫🇷 法国": 30,
+    "🇨🇦 加拿大": 15,
+    "🇬🇧 英国": 14,
+    "🇪🇸 西班牙": 11,
+    "🇸🇪 瑞典": 5,
+    "🇨🇭 瑞士": 3,
+    "🇮🇹 意大利": 2,
+    "🇫🇮 芬兰": 2,
+    "🇲🇽 墨西哥": 1,
+    "🇧🇾 BY": 1,
+    "🇦🇹 奥地利": 1,
+    "🇷🇺 俄罗斯": 1,
+    "🇳🇴 NO": 1,
+    "🇪🇪 EE": 1
+  },
+  "global_top10": [
+    {
+      "name": "🇨🇦 加拿大 01",
+      "type": "ss",
+      "delay": 70
+    },
+    {
+      "name": "🇨🇦 加拿大 02",
+      "type": "ss",
+      "delay": 77
+    },
+    {
+      "name": "🇨🇦 加拿大 03",
+      "type": "ss",
+      "delay": 80
+    },
+    {
+      "name": "🇨🇦 加拿大 04",
+      "type": "vmess",
+      "delay": 87
+    },
+    {
+      "name": "🇨🇦 加拿大 05",
+      "type": "vmess",
+      "delay": 100
+    },
+    {
+      "name": "🇨🇦 加拿大 06",
+      "type": "vmess",
+      "delay": 101
+    },
+    {
+      "name": "🇨🇦 加拿大 07",
+      "type": "ss",
+      "delay": 106
+    },
+    {
+      "name": "🇨🇦 加拿大 08",
+      "type": "vmess",
+      "delay": 122
+    },
+    {
+      "name": "🇨🇦 加拿大 09",
+      "type": "vless",
+      "delay": 123
+    },
+    {
+      "name": "🇨🇦 加拿大 10",
+      "type": "vless",
+      "delay": 127
+    }
+  ],
+  "fastest_ms": 24,
+  "median_ms": 474,
   "countries": {
-    "🇺🇸 美国": 170,
-    "🇨🇦 加拿大": 10,
-    "🇬🇧 英国": 7,
-    "🇳🇱 荷兰": 6,
-    "🇲🇽 墨西哥": 3,
-    "🇪🇸 西班牙": 2,
-    "🇮🇪 爱尔兰": 1,
-    "🇫🇷 法国": 1
+    "🇳🇱 荷兰": 62,
+    "🇺🇸 美国": 30,
+    "🇩🇪 德国": 30,
+    "🇫🇷 法国": 27,
+    "🇨🇦 加拿大": 15,
+    "🇬🇧 英国": 13,
+    "🇪🇸 西班牙": 10,
+    "🇸🇪 瑞典": 3,
+    "🇨🇭 瑞士": 3,
+    "🇲🇽 墨西哥": 1,
+    "🇧🇾 BY": 1,
+    "🇦🇹 奥地利": 1,
+    "🇷🇺 俄罗斯": 1,
+    "🇳🇴 NO": 1,
+    "🇮🇹 意大利": 1,
+    "🇪🇪 EE": 1
   },
   "protocols": {
-    "ss": 77,
-    "vmess": 48,
-    "trojan": 21,
-    "vless": 53,
-    "hysteria2": 1
+    "ss": 107,
+    "vless": 59,
+    "trojan": 4,
+    "vmess": 19,
+    "hysteria2": 11
   },
   "sources": [
     {
@@ -53,59 +133,87 @@
     {
       "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
       "nodes": 437
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
+      "nodes": 2120
+    },
+    {
+      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml",
+      "nodes": 133
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml",
+      "nodes": 93
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ts-sf/fly/main/clash",
+      "nodes": 200
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/main/sub/mix",
+      "nodes": 1115
+    },
+    {
+      "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
+      "nodes": 124
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+      "nodes": 6
     }
   ],
   "top10": [
     {
       "name": "🇺🇸 美国 01",
       "type": "ss",
-      "delay": 58
+      "delay": 24
     },
     {
       "name": "🇺🇸 美国 02",
-      "type": "ss",
-      "delay": 59
+      "type": "vless",
+      "delay": 26
     },
     {
       "name": "🇺🇸 美国 03",
-      "type": "ss",
-      "delay": 59
+      "type": "vless",
+      "delay": 26
     },
     {
       "name": "🇺🇸 美国 04",
       "type": "ss",
-      "delay": 59
+      "delay": 26
     },
     {
       "name": "🇺🇸 美国 05",
       "type": "ss",
-      "delay": 68
+      "delay": 30
     },
     {
       "name": "🇺🇸 美国 06",
-      "type": "vmess",
-      "delay": 70
+      "type": "ss",
+      "delay": 33
     },
     {
       "name": "🇺🇸 美国 07",
       "type": "ss",
-      "delay": 71
+      "delay": 36
     },
     {
       "name": "🇺🇸 美国 08",
-      "type": "trojan",
-      "delay": 75
+      "type": "ss",
+      "delay": 40
     },
     {
       "name": "🇺🇸 美国 09",
-      "type": "vmess",
-      "delay": 78
+      "type": "ss",
+      "delay": 41
     },
     {
       "name": "🇺🇸 美国 10",
-      "type": "vmess",
-      "delay": 82
+      "type": "ss",
+      "delay": 42
     }
   ],
-  "seconds": 174
+  "seconds": 333
 }
