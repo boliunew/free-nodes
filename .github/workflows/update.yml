@@ -5,7 +5,7 @@ on:
     - cron: "17 */6 * * *"     # 每 6 小时一次（UTC），想更勤快改成 "17 */3 * * *"
   workflow_dispatch:            # 手动点 Run workflow 立即更新
   push:
-    paths: [sources.txt, collector.py]
+    paths: [sources.txt, collector.py, youtube.txt, youtube.py]
 
 permissions:
   contents: write

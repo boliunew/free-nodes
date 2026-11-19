@@ -411,6 +411,15 @@ def main():
             src_stats.append((url, len(got)))
             print(f"  ✓ {len(got):5d}  {url[:90]}")
             raw += got
+    # 📺 YouTube 频道简介里的节点
+    yt_stats = {}
+    try:
+        import youtube
+        yt_nodes, yt_stats = youtube.collect(parse_any, parse_links)
+        src_stats.append(("YouTube", len(yt_nodes)))
+        raw += yt_nodes
+    except Exception as e:
+        print("  ⚠️ YouTube 抓取出错：", e)
     for p in raw: p["_orig"] = str(p.get("name", ""))
     proxies = clean(raw)
     print(f"🧹 原始 {len(raw)} → 去重后 {len(proxies)}")
@@ -508,6 +517,7 @@ def main():
         "countries": dict(sorted(by_cc.items(), key=lambda x: -x[1])), "protocols": by_type,
         "sources": [{"url": u, "nodes": n} for u, n in src_stats],
         "top10": [{"name": p["name"], "type": p["type"], "delay": round(final_delay[p["name"]] or 0)} for p in alive[:10]],
+        "youtube": yt_stats,
         "seconds": round(time.time() - t0),
     }
     json.dump(stats, open(os.path.join(OUT, "stats.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
