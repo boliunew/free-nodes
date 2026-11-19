@@ -458,10 +458,10 @@ def main():
     reserved = {p["name"] for p in reserve}
     print("🌏 亚洲保底：", asia_n or "本轮没有活着的亚洲节点")
 
-    def pick(allow_us, us_cap):
+    def pick(allow_us, us_cap, limit):
         out, us_n = list(reserve), 0
         for p in alive:
-            if len(out) >= a.max: break
+            if len(out) >= limit: break
             if p["name"] in reserved or not fast(p): continue
             cc = cc_new[p["name"]]
             if cc == "US":
@@ -472,10 +472,10 @@ def main():
             out.append(p)
         return sorted(out, key=lambda p: final_delay[p["name"]] or 0), us_n
 
-    # 📦 全部版：美国最多 US_CAP 个（测速服务器在美国，不限的话会被美国节点挤满）
-    full, us_n = pick(True, int(os.getenv("US_CAP", 30)))
+    # 📦 全部版：美国 + 亚洲保底 + 欧洲等，最多 FULL_MAX 个；美国最多 US_CAP 个，免得把其他地区挤掉
+    full, us_n = pick(True, int(os.getenv("US_CAP", 100)), int(os.getenv("FULL_MAX", 300)))
     # 🌏 海外版：排除美国和识别不出国家的
-    glob, _ = pick(False, 0)
+    glob, _ = pick(False, 0, a.max)
     print(f"📦 全部版 {len(full)} 个（美国 {us_n}）· 🌏 海外版 {len(glob)} 个")
 
     dump(build_config(full), os.path.join(OUT, "clash.yaml"))

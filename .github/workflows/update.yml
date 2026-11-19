@@ -40,10 +40,11 @@ jobs:
 
       - name: 🔍 收集 + 测速 + 生成订阅
         env:
-          MAX_NODES: "200"        # 每份订阅最多保留多少个
+          MAX_NODES: "200"        # 海外版最多几个
           MAX_DELAY: "3000"       # 超过这个延迟(ms)的丢掉
           MAX_CANDIDATES: "9000"  # 最多测多少个候选
-          US_CAP: "30"            # 全部版里美国最多几个
+          FULL_MAX: "300"         # 全部版最多几个
+          US_CAP: "100"           # 全部版里美国最多几个
           ASIA_QUOTA: "HK=15,JP=15,SG=12,TW=10,KR=10,MY=5,TH=5,VN=5,IN=5,ID=5,PH=5"  # 亚洲保底名额
         run: python collector.py
 
@@ -54,7 +55,7 @@ jobs:
           git add output/
           if git diff --cached --quiet; then echo "无变化"; exit 0; fi
           git commit -m "🛰️ 节点更新 $(date -u '+%Y-%m-%d %H:%M') · $(python -c "import json;print(json.load(open('output/stats.json'))['alive'])") 个可用"
-          git push
+          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push && break; git rebase --abort 2>/dev/null; sleep $((i*5)); done
 
       - name: 📬 Telegram 推送（可选）
         if: success()

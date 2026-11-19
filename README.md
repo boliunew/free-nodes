@@ -6,8 +6,8 @@
 
 | 用途 | 链接 |
 |---|---|
-| 🌏 **海外版**（排除美国，亚洲/欧洲等） | `https://raw.githubusercontent.com/boliunew/free-nodes/main/output/global.yaml` |
-| 📦 全部版（含美国，美国最多 30 个） | `https://raw.githubusercontent.com/boliunew/free-nodes/main/output/clash.yaml` |
+| 🌏 **海外版**（排除美国，亚洲保底 + 欧洲等，最多 200 个） | `https://raw.githubusercontent.com/boliunew/free-nodes/main/output/global.yaml` |
+| 📦 **全部版**（美国 100 + 亚洲保底 + 欧洲等，最多 300 个） | `https://raw.githubusercontent.com/boliunew/free-nodes/main/output/clash.yaml` |
 | 🧩 只要节点（proxy-provider） | `.../output/global-provider.yaml` · `.../output/provider.yaml` |
 | 🚀 jsDelivr 镜像（raw 打不开时用） | `https://testingcf.jsdelivr.net/gh/boliunew/free-nodes@main/output/clash.yaml` |
 | 📊 本次统计 | [output/stats.json](output/stats.json) |
