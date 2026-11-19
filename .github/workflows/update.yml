@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -40,9 +40,9 @@ jobs:
 
       - name: 🔍 收集 + 测速 + 生成订阅
         env:
-          MAX_NODES: "200"        # 最终保留多少个
+          MAX_NODES: "200"        # 每份订阅最多保留多少个
           MAX_DELAY: "3000"       # 超过这个延迟(ms)的丢掉
-          MAX_CANDIDATES: "6000"  # 最多测多少个候选
+          MAX_CANDIDATES: "9000"  # 最多测多少个候选
         run: python collector.py
 
       - name: 💾 提交更新

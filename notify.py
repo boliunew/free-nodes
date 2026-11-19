@@ -7,16 +7,15 @@ if not (tok and chat):
     print("未配置 Telegram，跳过推送"); raise SystemExit
 
 s = json.load(open("output/stats.json", encoding="utf-8"))
-repo = os.getenv("GITHUB_REPOSITORY", "")
-sub = f"https://raw.githubusercontent.com/{repo}/main/output/clash.yaml"
-top_cc = " ".join(f"{k}×{v}" for k, v in list(s["countries"].items())[:8])
-top = "\n".join(f"  {i+1}. {t['name']}  {t['type']}  {t['delay']}ms" for i, t in enumerate(s["top5"] if "top5" in s else s["top10"][:5]))
-msg = (f"🛰️ 免费节点已更新\n"
-       f"🕒 {s['updated']}\n"
-       f"✅ 可用 {s['alive']} / 测试 {s['candidates']}\n"
-       f"⚡ 最快 {s['fastest_ms']}ms · 中位 {s['median_ms']}ms\n"
-       f"🌍 {top_cc}\n\n🏆 最快 5 个：\n{top}\n\n"
-       f"📲 订阅：{sub}")
+base = f"https://raw.githubusercontent.com/{os.getenv('GITHUB_REPOSITORY', '')}/main/output"
+cc = lambda d: " ".join(f"{k}×{v}" for k, v in list(d.items())[:8])
+top = "\n".join(f"  {i+1}. {t['name']}  {t['type']}  {t['delay']}ms" for i, t in enumerate(s.get("global_top10", [])[:5]))
+msg = (f"🛰️ 免费节点已更新 · {s['updated']}\n"
+       f"✅ 存活 {s.get('alive_total', s['alive'])} / 测试 {s['candidates']}\n\n"
+       f"🌏 海外版 {s.get('global_nodes', 0)} 个：{cc(s.get('global_countries', {}))}\n"
+       f"🏆 海外最快：\n{top}\n\n"
+       f"📦 全部版 {s['alive']} 个 · 最快 {s['fastest_ms']}ms\n\n"
+       f"📲 海外订阅：{base}/global.yaml\n📲 全部订阅：{base}/clash.yaml")
 req = ur.Request(f"https://api.telegram.org/bot{tok}/sendMessage",
                  data=json.dumps({"chat_id": chat, "text": msg, "disable_web_page_preview": True}).encode(),
                  headers={"Content-Type": "application/json"})

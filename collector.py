@@ -343,8 +343,8 @@ def final_names(proxies):
         p["name"] = f"{flag} {cn} {count[cc]:02d}"
 
 # ─────────────────────────── 生成配置 ───────────────────────────
-REGIONS = [("🇭🇰 香港", "香港|HK|🇭🇰"), ("🇯🇵 日本", "日本|JP|🇯🇵"), ("🇸🇬 新加坡", "新加坡|SG|🇸🇬"),
-           ("🇺🇸 美国", "美国|US|🇺🇸"), ("🇹🇼 台湾", "台湾|TW|🇹🇼"), ("🇪🇺 欧洲", "🇩🇪|🇬🇧|🇫🇷|🇳🇱|🇫🇮|🇸🇪|🇵🇱|🇮🇹|🇪🇸|🇨🇭|🇦🇹|🇨🇿|🇷🇴|🇱🇹|🇮🇪")]
+REGIONS = [("🇭🇰 香港", "香港|🇭🇰"), ("🇯🇵 日本", "日本|🇯🇵"), ("🇸🇬 新加坡", "新加坡|🇸🇬"),
+           ("🇺🇸 美国", "美国|🇺🇸"), ("🇹🇼 台湾", "台湾|🇹🇼"), ("🇰🇷 韩国", "韩国|🇰🇷"), ("🇨🇦 加拿大", "加拿大|🇨🇦"), ("🇪🇺 欧洲", "🇩🇪|🇬🇧|🇫🇷|🇳🇱|🇫🇮|🇸🇪|🇵🇱|🇮🇹|🇪🇸|🇨🇭|🇦🇹|🇨🇿|🇷🇴|🇱🇹|🇮🇪|🇧🇪|🇩🇰|🇳🇴|🇧🇬|🇭🇺|🇱🇻|🇪🇪|🇵🇹|🇬🇷|🇺🇦|🇲🇩"), ("🌏 亚太其他", "🇮🇳|🇻🇳|🇹🇭|🇲🇾|🇮🇩|🇵🇭|🇦🇺|🇳🇿|🇰🇿|🇦🇪|🇹🇷|🇮🇱")]
 
 def build_config(proxies):
     names = [p["name"] for p in proxies]
@@ -428,8 +428,7 @@ def main():
         delays = delay_test(proxies, mh, work)
         alive = [p for p in proxies if p["name"] in delays and delays[p["name"]] <= a.max_delay]
         alive.sort(key=lambda p: delays[p["name"]])
-        alive = alive[:a.max]
-    print(f"✅ 最终保留 {len(alive)} 个节点")
+    print(f"✅ 存活 {len(alive)} 个节点")
     if not alive:
         sys.exit("❌ 没有可用节点，本次不覆盖旧订阅")
 
@@ -437,13 +436,35 @@ def main():
     dmap = {p["name"]: delays.get(p["name"]) for p in alive}
     print("🌍 识别节点国家…")
     geo_lookup(alive)
+    cc_of = {p["name"]: p["_cc"] for p in alive}
     old = [p["name"] for p in alive]
-    final_names(alive)
+    final_names(alive)  # 在全部存活节点上统一命名，两份订阅里名字一致
     final_delay = {p["name"]: dmap[o] for p, o in zip(alive, old)}
+    cc_new = {p["name"]: cc_of[o] for p, o in zip(alive, old)}
 
-    dump(build_config(alive), os.path.join(OUT, "clash.yaml"))
-    dump({"proxies": alive}, os.path.join(OUT, "provider.yaml"))
+    # 📦 全部版：按延迟取，美国最多占 US_CAP 个（测速服务器在美国，不限的话会被美国节点挤满）
+    us_cap = int(os.getenv("US_CAP", 30))
+    full, us_n = [], 0
+    for p in alive:
+        if cc_new[p["name"]] == "US":
+            if us_n >= us_cap: continue
+            us_n += 1
+        full.append(p)
+        if len(full) >= a.max: break
+    # 🌏 海外版：排除美国和识别不出国家的
+    glob = [p for p in alive if cc_new[p["name"]] not in ("US", "ZZ")][:a.max]
+    print(f"📦 全部版 {len(full)} 个（美国 {us_n}）· 🌏 海外版 {len(glob)} 个")
 
+    dump(build_config(full), os.path.join(OUT, "clash.yaml"))
+    dump({"proxies": full}, os.path.join(OUT, "provider.yaml"))
+    if glob:
+        dump(build_config(glob), os.path.join(OUT, "global.yaml"))
+        dump({"proxies": glob}, os.path.join(OUT, "global-provider.yaml"))
+
+    alive_all, alive = alive, full
+    by_glob = {}
+    for p in glob:
+        k = p["name"].rsplit(" ", 1)[0]; by_glob[k] = by_glob.get(k, 0) + 1
     by_cc = {}
     for p in alive:
         k = p["name"].rsplit(" ", 1)[0]; by_cc[k] = by_cc.get(k, 0) + 1
@@ -452,7 +473,9 @@ def main():
     ds = sorted(v for v in final_delay.values() if v)
     stats = {
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-        "candidates": len(proxies), "alive": len(alive),
+        "candidates": len(proxies), "alive_total": len(alive_all), "alive": len(alive),
+        "global_nodes": len(glob), "global_countries": dict(sorted(by_glob.items(), key=lambda x: -x[1])),
+        "global_top10": [{"name": p["name"], "type": p["type"], "delay": round(final_delay[p["name"]] or 0)} for p in glob[:10]],
         "fastest_ms": round(ds[0]) if ds else None, "median_ms": round(ds[len(ds) // 2]) if ds else None,
         "countries": dict(sorted(by_cc.items(), key=lambda x: -x[1])), "protocols": by_type,
         "sources": [{"url": u, "nodes": n} for u, n in src_stats],
