@@ -43,6 +43,8 @@ jobs:
           MAX_NODES: "200"        # 每份订阅最多保留多少个
           MAX_DELAY: "3000"       # 超过这个延迟(ms)的丢掉
           MAX_CANDIDATES: "9000"  # 最多测多少个候选
+          US_CAP: "30"            # 全部版里美国最多几个
+          ASIA_QUOTA: "HK=15,JP=15,SG=12,TW=10,KR=10,MY=5,TH=5,VN=5,IN=5,ID=5,PH=5"  # 亚洲保底名额
         run: python collector.py
 
       - name: 💾 提交更新

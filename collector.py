@@ -342,6 +342,11 @@ def final_names(proxies):
         count[cc] = count.get(cc, 0) + 1
         p["name"] = f"{flag} {cn} {count[cc]:02d}"
 
+# 🌏 亚洲各地区保底名额（可用环境变量 ASIA_QUOTA 覆盖，如 "HK=20,JP=20,SG=15"）
+ASIA_QUOTA = {"HK": 15, "JP": 15, "SG": 12, "TW": 10, "KR": 10, "MY": 5, "TH": 5, "VN": 5, "IN": 5, "ID": 5, "PH": 5}
+if os.getenv("ASIA_QUOTA"):
+    ASIA_QUOTA = {k.strip().upper(): int(v) for k, v in (x.split("=") for x in os.getenv("ASIA_QUOTA").split(",") if "=" in x)}
+
 # ─────────────────────────── 生成配置 ───────────────────────────
 REGIONS = [("🇭🇰 香港", "香港|🇭🇰"), ("🇯🇵 日本", "日本|🇯🇵"), ("🇸🇬 新加坡", "新加坡|🇸🇬"),
            ("🇺🇸 美国", "美国|🇺🇸"), ("🇹🇼 台湾", "台湾|🇹🇼"), ("🇰🇷 韩国", "韩国|🇰🇷"), ("🇨🇦 加拿大", "加拿大|🇨🇦"), ("🇪🇺 欧洲", "🇩🇪|🇬🇧|🇫🇷|🇳🇱|🇫🇮|🇸🇪|🇵🇱|🇮🇹|🇪🇸|🇨🇭|🇦🇹|🇨🇿|🇷🇴|🇱🇹|🇮🇪|🇧🇪|🇩🇰|🇳🇴|🇧🇬|🇭🇺|🇱🇻|🇪🇪|🇵🇹|🇬🇷|🇺🇦|🇲🇩"), ("🌏 亚太其他", "🇮🇳|🇻🇳|🇹🇭|🇲🇾|🇮🇩|🇵🇭|🇦🇺|🇳🇿|🇰🇿|🇦🇪|🇹🇷|🇮🇱")]
@@ -426,7 +431,7 @@ def main():
         print(f"  合法节点 {len(proxies)}")
         print("⚡ 真实测速中（mihomo url-test）…")
         delays = delay_test(proxies, mh, work)
-        alive = [p for p in proxies if p["name"] in delays and delays[p["name"]] <= a.max_delay]
+        alive = [p for p in proxies if p["name"] in delays]
         alive.sort(key=lambda p: delays[p["name"]])
     print(f"✅ 存活 {len(alive)} 个节点")
     if not alive:
@@ -442,17 +447,35 @@ def main():
     final_delay = {p["name"]: dmap[o] for p, o in zip(alive, old)}
     cc_new = {p["name"]: cc_of[o] for p, o in zip(alive, old)}
 
-    # 📦 全部版：按延迟取，美国最多占 US_CAP 个（测速服务器在美国，不限的话会被美国节点挤满）
-    us_cap = int(os.getenv("US_CAP", 30))
-    full, us_n = [], 0
-    for p in alive:
-        if cc_new[p["name"]] == "US":
-            if us_n >= us_cap: continue
-            us_n += 1
-        full.append(p)
-        if len(full) >= a.max: break
+    fast = lambda p: final_delay[p["name"]] is None or final_delay[p["name"]] <= a.max_delay
+    # 🌏 亚洲保底：每个地区先留最快的 N 个（哪怕超过 MAX_DELAY 也留，只要测得通）
+    reserve, asia_n = [], {}
+    for p in alive:  # alive 已按延迟排好序
+        cc = cc_new[p["name"]]
+        if cc in ASIA_QUOTA and asia_n.get(cc, 0) < ASIA_QUOTA[cc]:
+            asia_n[cc] = asia_n.get(cc, 0) + 1
+            reserve.append(p)
+    reserved = {p["name"] for p in reserve}
+    print("🌏 亚洲保底：", asia_n or "本轮没有活着的亚洲节点")
+
+    def pick(allow_us, us_cap):
+        out, us_n = list(reserve), 0
+        for p in alive:
+            if len(out) >= a.max: break
+            if p["name"] in reserved or not fast(p): continue
+            cc = cc_new[p["name"]]
+            if cc == "US":
+                if not allow_us or us_n >= us_cap: continue
+                us_n += 1
+            elif cc == "ZZ" and not allow_us:
+                continue
+            out.append(p)
+        return sorted(out, key=lambda p: final_delay[p["name"]] or 0), us_n
+
+    # 📦 全部版：美国最多 US_CAP 个（测速服务器在美国，不限的话会被美国节点挤满）
+    full, us_n = pick(True, int(os.getenv("US_CAP", 30)))
     # 🌏 海外版：排除美国和识别不出国家的
-    glob = [p for p in alive if cc_new[p["name"]] not in ("US", "ZZ")][:a.max]
+    glob, _ = pick(False, 0)
     print(f"📦 全部版 {len(full)} 个（美国 {us_n}）· 🌏 海外版 {len(glob)} 个")
 
     dump(build_config(full), os.path.join(OUT, "clash.yaml"))
@@ -465,6 +488,9 @@ def main():
     by_glob = {}
     for p in glob:
         k = p["name"].rsplit(" ", 1)[0]; by_glob[k] = by_glob.get(k, 0) + 1
+    by_all = {}
+    for p in alive_all:
+        k = p["name"].rsplit(" ", 1)[0]; by_all[k] = by_all.get(k, 0) + 1
     by_cc = {}
     for p in alive:
         k = p["name"].rsplit(" ", 1)[0]; by_cc[k] = by_cc.get(k, 0) + 1
@@ -474,6 +500,8 @@ def main():
     stats = {
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "candidates": len(proxies), "alive_total": len(alive_all), "alive": len(alive),
+        "alive_countries": dict(sorted(by_all.items(), key=lambda x: -x[1])),
+        "asia_reserved": asia_n,
         "global_nodes": len(glob), "global_countries": dict(sorted(by_glob.items(), key=lambda x: -x[1])),
         "global_top10": [{"name": p["name"], "type": p["type"], "delay": round(final_delay[p["name"]] or 0)} for p in glob[:10]],
         "fastest_ms": round(ds[0]) if ds else None, "median_ms": round(ds[len(ds) // 2]) if ds else None,
