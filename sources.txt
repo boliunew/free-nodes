@@ -1,0 +1,15 @@
+# 🌍 节点来源（每行一个订阅链接，# 开头为注释）
+# 支持三种格式：Clash YAML / Base64 订阅 / 明文分享链接（vmess:// vless:// trojan:// ss:// hy2:// tuic://）
+# 想加新来源直接往下加一行即可，失效的来源会自动跳过
+
+# —— Clash / Mihomo YAML ——
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml
+https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/clash.yaml
+https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml
+
+# —— Base64 / 明文订阅 ——
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt
+https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
