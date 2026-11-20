@@ -42,7 +42,7 @@ jobs:
         env:
           MAX_NODES: "200"        # 海外版最多几个
           MAX_DELAY: "3000"       # 超过这个延迟(ms)的丢掉
-          MAX_CANDIDATES: "9000"  # 最多测多少个候选
+          MAX_CANDIDATES: "12000"  # 最多测多少个候选
           FULL_MAX: "300"         # 全部版最多几个
           US_CAP: "100"           # 全部版里美国最多几个
           ASIA_QUOTA: "HK=15,JP=15,SG=12,TW=10,KR=10,MY=5,TH=5,VN=5,IN=5,ID=5,PH=5"  # 亚洲保底名额
