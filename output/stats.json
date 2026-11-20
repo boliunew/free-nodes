@@ -1,172 +1,171 @@
 {
-  "updated": "2026-11-20 00:44 UTC",
-  "candidates": 8667,
-  "alive_total": 1260,
+  "updated": "2026-11-20 00:57 UTC",
+  "candidates": 8957,
+  "alive_total": 1319,
   "alive": 300,
   "alive_countries": {
-    "🇺🇸 美国": 390,
-    "🇳🇱 荷兰": 157,
-    "🇩🇪 德国": 109,
-    "🇨🇦 加拿大": 107,
-    "🇸🇬 新加坡": 91,
-    "🇫🇷 法国": 47,
-    "🇬🇧 英国": 38,
-    "🇪🇸 西班牙": 32,
-    "🇷🇺 俄罗斯": 29,
-    "🇨🇭 瑞士": 25,
-    "🇯🇵 日本": 24,
-    "🇫🇮 芬兰": 21,
-    "🇹🇷 土耳其": 20,
+    "🇺🇸 美国": 395,
+    "🇳🇱 荷兰": 158,
+    "🇨🇦 加拿大": 120,
+    "🇩🇪 德国": 117,
+    "🇸🇬 新加坡": 94,
+    "🇫🇷 法国": 49,
+    "🇬🇧 英国": 36,
+    "🇪🇸 西班牙": 35,
+    "🇷🇺 俄罗斯": 31,
+    "🇯🇵 日本": 29,
+    "🇹🇷 土耳其": 25,
+    "🇨🇭 瑞士": 24,
+    "🇫🇮 芬兰": 22,
+    "🇭🇰 香港": 17,
+    "🇰🇷 韩国": 17,
+    "🇸🇪 瑞典": 16,
     "🇧🇷 巴西": 16,
-    "🇰🇷 韩国": 16,
-    "🇸🇪 瑞典": 15,
-    "🇮🇹 意大利": 14,
-    "🇭🇰 香港": 12,
-    "🇪🇪 EE": 11,
-    "🇹🇼 台湾": 10,
+    "🇮🇹 意大利": 15,
+    "🇪🇪 EE": 14,
     "🇧🇾 BY": 8,
-    "🇮🇳 印度": 6,
-    "🇳🇪 NE": 5,
+    "🇹🇼 台湾": 8,
+    "🇮🇳 印度": 8,
     "🇦🇹 奥地利": 4,
+    "🇦🇱 AL": 4,
+    "🇿🇦 南非": 4,
+    "🇻🇳 越南": 4,
     "🇸🇰 SK": 4,
-    "🇮🇷 伊朗": 3,
+    "🇳🇪 NE": 4,
+    "🇲🇽 墨西哥": 3,
+    "🇨🇱 CL": 3,
     "🇵🇱 波兰": 3,
-    "🇦🇱 AL": 3,
+    "🇮🇷 伊朗": 3,
     "🇱🇻 LV": 3,
-    "🇿🇦 南非": 3,
-    "🇲🇾 马来西亚": 3,
-    "🇳🇬 NG": 3,
+    "🇦🇪 阿联酋": 3,
+    "🇰🇿 KZ": 3,
     "🇮🇪 爱尔兰": 2,
-    "🇨🇱 CL": 2,
     "🇨🇿 捷克": 2,
     "🇷🇴 罗马尼亚": 2,
-    "🇧🇬 BG": 2,
+    "🇱🇺 LU": 2,
     "🇩🇰 DK": 2,
-    "🇦🇪 阿联酋": 2,
     "🇦🇺 澳大利亚": 2,
-    "🇻🇳 越南": 2,
-    "🇰🇿 KZ": 2,
-    "🇱🇾 LY": 2,
-    "🇲🇽 墨西哥": 1,
+    "🇳🇬 NG": 2,
     "🇳🇴 NO": 1,
-    "🇱🇺 LU": 1,
-    "🇺🇦 乌克兰": 1,
+    "🇧🇬 BG": 1,
     "🇹🇭 泰国": 1,
-    "🇨🇳 中国": 1
+    "🇲🇾 马来西亚": 1,
+    "🇨🇳 中国": 1,
+    "🇱🇾 LY": 1
   },
   "asia_reserved": {
-    "HK": 12,
+    "HK": 15,
     "JP": 15,
-    "TW": 10,
+    "TW": 8,
     "KR": 10,
     "SG": 12,
     "IN": 5,
     "TH": 1,
-    "MY": 3,
-    "VN": 2
+    "MY": 1,
+    "VN": 4
   },
   "global_nodes": 200,
   "global_countries": {
-    "🇨🇦 加拿大": 60,
-    "🇩🇪 德国": 25,
-    "🇳🇱 荷兰": 16,
+    "🇨🇦 加拿大": 58,
+    "🇩🇪 德国": 31,
+    "🇭🇰 香港": 15,
     "🇯🇵 日本": 15,
-    "🇭🇰 香港": 12,
     "🇬🇧 英国": 12,
     "🇸🇬 新加坡": 12,
-    "🇹🇼 台湾": 10,
+    "🇪🇸 西班牙": 10,
     "🇰🇷 韩国": 10,
-    "🇪🇸 西班牙": 8,
-    "🇫🇷 法国": 5,
+    "🇳🇱 荷兰": 8,
+    "🇹🇼 台湾": 8,
     "🇮🇳 印度": 5,
-    "🇲🇾 马来西亚": 3,
+    "🇫🇷 法国": 4,
+    "🇻🇳 越南": 4,
+    "🇲🇽 墨西哥": 3,
     "🇮🇪 爱尔兰": 2,
-    "🇻🇳 越南": 2,
-    "🇲🇽 墨西哥": 1,
     "🇸🇪 瑞典": 1,
-    "🇹🇭 泰国": 1
+    "🇹🇭 泰国": 1,
+    "🇲🇾 马来西亚": 1
   },
   "global_top10": [
     {
       "name": "🇨🇦 加拿大 01",
       "type": "vless",
-      "delay": 60
+      "delay": 64
     },
     {
       "name": "🇨🇦 加拿大 02",
       "type": "vless",
-      "delay": 65
+      "delay": 68
     },
     {
       "name": "🇨🇦 加拿大 03",
-      "type": "ss",
-      "delay": 66
+      "type": "vless",
+      "delay": 72
     },
     {
       "name": "🇨🇦 加拿大 04",
       "type": "vless",
-      "delay": 66
+      "delay": 84
     },
     {
       "name": "🇨🇦 加拿大 05",
-      "type": "ss",
-      "delay": 67
+      "type": "vless",
+      "delay": 86
     },
     {
       "name": "🇨🇦 加拿大 06",
-      "type": "ss",
-      "delay": 68
+      "type": "vless",
+      "delay": 88
     },
     {
       "name": "🇨🇦 加拿大 07",
-      "type": "ss",
-      "delay": 68
+      "type": "vless",
+      "delay": 98
     },
     {
       "name": "🇨🇦 加拿大 08",
       "type": "vless",
-      "delay": 68
+      "delay": 100
     },
     {
       "name": "🇨🇦 加拿大 09",
-      "type": "ss",
-      "delay": 70
+      "type": "vless",
+      "delay": 104
     },
     {
       "name": "🇨🇦 加拿大 10",
-      "type": "vless",
-      "delay": 70
+      "type": "ss",
+      "delay": 105
     }
   ],
-  "fastest_ms": 22,
-  "median_ms": 380,
+  "fastest_ms": 16,
+  "median_ms": 416,
   "countries": {
     "🇺🇸 美国": 100,
-    "🇨🇦 加拿大": 60,
-    "🇩🇪 德国": 25,
-    "🇳🇱 荷兰": 16,
+    "🇨🇦 加拿大": 58,
+    "🇩🇪 德国": 31,
+    "🇭🇰 香港": 15,
     "🇯🇵 日本": 15,
-    "🇭🇰 香港": 12,
     "🇬🇧 英国": 12,
     "🇸🇬 新加坡": 12,
-    "🇹🇼 台湾": 10,
+    "🇪🇸 西班牙": 10,
     "🇰🇷 韩国": 10,
-    "🇪🇸 西班牙": 8,
-    "🇫🇷 法国": 5,
+    "🇳🇱 荷兰": 8,
+    "🇹🇼 台湾": 8,
     "🇮🇳 印度": 5,
-    "🇲🇾 马来西亚": 3,
+    "🇫🇷 法国": 4,
+    "🇻🇳 越南": 4,
+    "🇲🇽 墨西哥": 3,
     "🇮🇪 爱尔兰": 2,
-    "🇻🇳 越南": 2,
-    "🇲🇽 墨西哥": 1,
     "🇸🇪 瑞典": 1,
-    "🇹🇭 泰国": 1
+    "🇹🇭 泰国": 1,
+    "🇲🇾 马来西亚": 1
   },
   "protocols": {
-    "vless": 70,
-    "ss": 122,
-    "trojan": 56,
-    "vmess": 30,
-    "hysteria2": 22
+    "ss": 127,
+    "vless": 61,
+    "vmess": 47,
+    "trojan": 44,
+    "hysteria2": 21
   },
   "sources": [
     {
@@ -183,7 +182,7 @@
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt",
-      "nodes": 96
+      "nodes": 97
     },
     {
       "url": "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
@@ -231,59 +230,59 @@
     },
     {
       "url": "YouTube",
-      "nodes": 0
+      "nodes": 2549
     }
   ],
   "top10": [
     {
       "name": "🇺🇸 美国 01",
-      "type": "vless",
-      "delay": 22
+      "type": "ss",
+      "delay": 16
     },
     {
       "name": "🇺🇸 美国 02",
       "type": "ss",
-      "delay": 24
+      "delay": 18
     },
     {
       "name": "🇺🇸 美国 03",
       "type": "ss",
-      "delay": 26
+      "delay": 19
     },
     {
       "name": "🇺🇸 美国 04",
+      "type": "ss",
+      "delay": 19
+    },
+    {
+      "name": "🇨🇦 加拿大 01",
       "type": "vless",
-      "delay": 34
+      "delay": 64
+    },
+    {
+      "name": "🇨🇦 加拿大 02",
+      "type": "vless",
+      "delay": 68
+    },
+    {
+      "name": "🇨🇦 加拿大 03",
+      "type": "vless",
+      "delay": 72
     },
     {
       "name": "🇺🇸 美国 05",
       "type": "ss",
-      "delay": 37
+      "delay": 75
     },
     {
       "name": "🇺🇸 美国 06",
       "type": "ss",
-      "delay": 40
+      "delay": 76
     },
     {
       "name": "🇺🇸 美国 07",
-      "type": "ss",
-      "delay": 40
-    },
-    {
-      "name": "🇺🇸 美国 08",
-      "type": "ss",
-      "delay": 42
-    },
-    {
-      "name": "🇺🇸 美国 09",
-      "type": "ss",
-      "delay": 42
-    },
-    {
-      "name": "🇺🇸 美国 10",
-      "type": "trojan",
-      "delay": 44
+      "type": "vless",
+      "delay": 78
     }
   ],
   "youtube": {
@@ -293,27 +292,38 @@
         "id": "UC9m6Ozdr5LuK5nL8RTvVR6Q",
         "videos": 5,
         "share_nodes": 0,
-        "links": 20,
-        "latest": "【每日更新】540个免费节点 | v2ray/Clash/SSR 稳定 · 极速 · 4K（2026/11/19）"
-      },
-      {
-        "channel": "梦歌 Channel of Dream Song",
-        "id": "UCgrqke1JhjHOU3AtwCmIL5Q",
-        "videos": 5,
-        "share_nodes": 0,
-        "links": 48,
-        "latest": "翻墙节点总掉线？机场VPN实测：YouTube 4K 峰值达47万 Kbps，ChatGPT、Gemini 都能用"
-      },
-      {
-        "channel": "工具大师i",
-        "id": "UCvHMSAjSxi8rD-iFvTgXIcA",
-        "videos": 5,
-        "share_nodes": 0,
-        "links": 11,
-        "latest": "11月17日最新高速稳定节点，传说级永久免费翻墙订阅，稳定8K 12K，免费节点订阅，节点分享，Clash节点，V2ra"
+        "links": 30,
+        "latest": "【每日更新】580个免费节点 | v2ray/Clash/SSR 稳定 · 极速 · 4K（2026/11/20）"
       }
     ],
-    "nodes": 0
+    "subs": [
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1M2aXf_fqMvpfHYLtCfB-nweDVPxX1vFf&export=download&confirm=t",
+        "nodes": 582
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1C4fj8_Ox5Jd8kzZhhxzMy5Bsh0mI3V2V&export=download&confirm=t",
+        "nodes": 523
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=19O9otZk6iNNNUUK-CT_NAbCK6EIs7TYj&export=download&confirm=t",
+        "nodes": 487
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1E7DUhoQ9jkhRYkVHtwKYlQBQlqQktwcH&export=download&confirm=t",
+        "nodes": 493
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1z-JUIGv6n12DYThGlyfhR2EiQcAvOLm3&export=download&confirm=t",
+        "nodes": 464
+      }
+    ],
+    "nodes": 2549
   },
-  "seconds": 392
+  "seconds": 359
 }
