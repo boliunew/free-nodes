@@ -179,12 +179,13 @@ def parse_any(text):
             return [p for p in (items or []) if isinstance(p, dict)]
         except Exception:
             pass
-    if "://" not in t[:200]:
-        try:
-            t = b64d(re.sub(r"\s+", "", t))
-        except Exception:
-            return []
-    return parse_links(t)
+    got = parse_links(t)  # 文本里混着说明文字也没关系，逐行找分享链接
+    if got:
+        return got
+    try:  # 整段 Base64 订阅
+        return parse_links(b64d(re.sub(r"\s+", "", t)))
+    except Exception:
+        return []
 
 # ─────────────────────────── 清洗去重 ───────────────────────────
 REQUIRED = {"ss": ["cipher", "password"], "vmess": ["uuid"], "vless": ["uuid"], "trojan": ["password"],

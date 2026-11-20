@@ -6,7 +6,7 @@ youtube.txt 每行一个：频道链接（/@xxx、/channel/UCxxx）、视频链�
   → 自动解析出频道 ID → 读频道 RSS（含最新视频的完整简介）
   → 从简介里抠出节点分享链接 + 订阅链接 → 抓订阅（简介里给的是网页的话再往下挖一层）
 """
-import concurrent.futures as cf, html, os, re, urllib.parse as up, urllib.request as ur
+import concurrent.futures as cf, gzip, html, io, os, re, urllib.parse as up, urllib.request as ur, zipfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BROWSER = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36",
@@ -22,10 +22,44 @@ MAX_VIDEOS = int(os.getenv("YT_MAX_VIDEOS", 5))      # 每个频道看最新几�
 MAX_URLS = int(os.getenv("YT_MAX_URLS", 60))         # 每次最多跟进多少个链接
 
 
-def get(url, timeout=20):
+def unpack(raw):
+    """📦 自动解压：zip 里的文本文件全部拼起来；gzip 直接解；普通文本原样返回"""
+    if raw[:2] == b"PK":
+        out = []
+        try:
+            with zipfile.ZipFile(io.BytesIO(raw)) as z:
+                for info in z.infolist():
+                    if info.is_dir() or info.file_size > 20_000_000:
+                        continue
+                    if info.flag_bits & 0x1:  # 加密的压缩包，没密码打不开
+                        print(f"    🔒 压缩包加密：{info.filename}")
+                        continue
+                    data = z.read(info)
+                    for enc in ("utf-8", "gbk", "utf-16"):
+                        try:
+                            out.append(data.decode(enc)); break
+                        except UnicodeDecodeError:
+                            pass
+        except zipfile.BadZipFile:
+            return ""
+        return "\n".join(out)
+    if raw[:2] == b"\x1f\x8b":
+        try:
+            raw = gzip.decompress(raw)
+        except Exception:
+            return ""
+    for enc in ("utf-8", "gbk"):
+        try:
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            pass
+    return raw.decode("utf-8", "ignore")
+
+
+def get(url, timeout=25):
     try:
         with ur.urlopen(ur.Request(url, headers=BROWSER), timeout=timeout) as r:
-            return r.read().decode("utf-8", "ignore")
+            return unpack(r.read(30_000_000))
     except Exception:
         return ""
 
