@@ -1,19 +1,14 @@
 # 📺 YouTube 节点频道
 # 每行一个：频道链接（https://www.youtube.com/@xxx 或 /channel/UCxxx）、视频链接、播放列表链接都行
 # 给视频链接也可以——会自动找到它所在的频道，之后一直跟踪这个频道的最新视频
-# 想加你常看的频道，直接往下加一行
+# 能自动拿到的：简介里直接贴节点 / 订阅链接 / Google Drive 文件 / Telegram 公开频道
+# 拿不到的：节点只在视频画面里、加密分享页（密码在视频里念）、要注册的机场
 
-# 每日更新免费节点
+# ✅ 分享日记 —— 每日更新几百个，节点放在 Google Drive + TG 频道
 https://www.youtube.com/watch?v=mmFMyUceMyk
-https://www.youtube.com/watch?v=5zj8fQHoZTQ
-https://www.youtube.com/watch?v=wQnl6igzaCY
 
-# 史诗级免费节点（月更）
-https://www.youtube.com/watch?v=bPq367TkBEM
-https://www.youtube.com/watch?v=FNs1N31XZtE
-
-# 免费 V2ray+Clash 节点专栏（播放列表）
-https://www.youtube.com/playlist?list=PLOswOiWM3Ss4b3vv8teub3YjrKbr7LGRT
-
-# 免费节点分享
-https://www.youtube.com/watch?v=_AjRqsOr4Ks
+# ⏸️ 已停用（2026-11 诊断）：
+# 梦歌 —— 现在只发付费机场广告
+# https://www.youtube.com/watch?v=bPq367TkBEM
+# 工具大师i —— 加密分享页，密码只在视频里念
+# https://www.youtube.com/playlist?list=PLOswOiWM3Ss4b3vv8teub3YjrKbr7LGRT

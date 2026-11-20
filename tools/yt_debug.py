@@ -36,3 +36,7 @@ for cid in cids:
             if not nodes and not inner:
                 txt = re.sub(r"<script.*?</script>|<style.*?</style>|<[^>]+>", " ", body, flags=re.S)
                 print("      TEXT", re.sub(r"\s+", " ", txt)[:300])
+
+print("\n" + "#" * 80 + "\n完整流程：")
+nodes, st = y.collect(c.parse_any, c.parse_links)
+print("TOTAL", len(nodes), st.get("subs"))

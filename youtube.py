@@ -14,9 +14,9 @@ BROWSER = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 SHARE_RE = re.compile(r"(?:vmess|vless|trojan|ss|ssr|hysteria2|hy2|tuic)://[^\s<>\"'`]+")
 URL_RE = re.compile(r"https?://[^\s<>\"'`)）]+")
 # 看起来像订阅的链接
-SUB_HINT = re.compile(r"(\.ya?ml|\.txt|/sub|subscribe|clash|v2ray|nodes?|token=|/link/|raw\.githubusercontent|gist\.github|/api/v1/client)", re.I)
+SUB_HINT = re.compile(r"(\.ya?ml|\.txt|/sub|subscribe|clash|v2ray|nodes?|token=|/link/|raw\.githubusercontent|gist\.github|/api/v1/client|drive\.usercontent|t\.me/s/)", re.I)
 # 明显不是订阅的
-SKIP = re.compile(r"(youtube\.com|youtu\.be|google\.com|t\.me|telegram|twitter\.com|x\.com|facebook|instagram|tiktok|bilibili|"
+SKIP = re.compile(r"(youtube\.com|youtu\.be|//(?:www\.)?google\.com|telegram\.org|//(?:www\.)?(?:twitter|x)\.com|facebook|instagram|tiktok|bilibili|"
                   r"patreon|paypal|discord|apps\.apple|play\.google|\.(png|jpe?g|gif|mp4|apk|exe|zip|dmg)$)", re.I)
 MAX_VIDEOS = int(os.getenv("YT_MAX_VIDEOS", 5))      # 每个频道看最新几条视频
 MAX_URLS = int(os.getenv("YT_MAX_URLS", 60))         # 每次最多跟进多少个链接
@@ -57,13 +57,23 @@ def channel_feed(cid):
     return out
 
 
+DRIVE_RE = re.compile(r"drive\.google\.com/(?:file/d/|open\?id=|uc\?(?:export=download&)?id=)([\w-]{20,})")
+TG_RE = re.compile(r"^https?://t\.me/(?:s/)?([A-Za-z][\w]{3,})/?(?:\d+)?$")
+
+
 def clean_url(u):
-    u = u.rstrip(".,;:!?。，；")
+    u = html.unescape(u.rstrip(".,;:!?。，；"))
     if "youtube.com/redirect" in u:  # YouTube 跳转链接解包
         q = up.parse_qs(up.urlparse(u).query).get("q")
         if q:
             u = q[0]
-    return html.unescape(u)
+    m = DRIVE_RE.search(u)  # 📁 Google Drive 分享页 → 直接下载地址
+    if m:
+        return f"https://drive.usercontent.google.com/download?id={m.group(1)}&export=download&confirm=t"
+    m = TG_RE.match(u)      # ✈️ Telegram 公开频道 → 网页预览版（不用登录就能看最近的消息）
+    if m and m.group(1).lower() not in ("joinchat", "share", "addstickers", "proxy", "socks"):
+        return f"https://t.me/s/{m.group(1)}"
+    return u
 
 
 def harvest(text):
@@ -72,6 +82,8 @@ def harvest(text):
     urls = []
     for u in URL_RE.findall(text):
         u = clean_url(u)
+        if (u.startswith("https://t.me/") and "/s/" not in u) or "drive.google.com/drive/folders" in u:
+            continue  # 私有群邀请链接、网盘文件夹：拿不到内容
         if not SKIP.search(u) and u not in urls:
             urls.append(u)
     # 像订阅的排前面
