@@ -1,177 +1,149 @@
 {
-  "updated": "2026-11-23 07:46 UTC",
-  "candidates": 9122,
-  "alive_total": 1023,
+  "updated": "2026-11-23 23:58 UTC",
+  "candidates": 6807,
+  "alive_total": 563,
   "alive": 300,
   "alive_countries": {
-    "🇺🇸 美国": 309,
-    "🇳🇱 荷兰": 121,
-    "🇩🇪 德国": 84,
-    "🇨🇦 加拿大": 71,
-    "🇸🇬 新加坡": 63,
-    "🇯🇵 日本": 41,
-    "🇷🇺 俄罗斯": 35,
-    "🇬🇧 英国": 34,
-    "🇫🇷 法国": 32,
-    "🇭🇰 香港": 26,
-    "🇨🇭 瑞士": 23,
-    "🇪🇸 西班牙": 22,
-    "🇧🇷 巴西": 15,
-    "🇰🇷 韩国": 15,
+    "🇺🇸 美国": 198,
+    "🇳🇱 荷兰": 90,
+    "🇸🇬 新加坡": 39,
+    "🇨🇦 加拿大": 37,
+    "🇪🇸 西班牙": 23,
+    "🇫🇷 法国": 21,
+    "🇩🇪 德国": 19,
+    "🇨🇭 瑞士": 18,
+    "🇷🇺 俄罗斯": 15,
+    "🇬🇧 英国": 14,
     "🇮🇹 意大利": 12,
-    "🇸🇪 瑞典": 11,
-    "🇹🇷 土耳其": 10,
-    "🇹🇼 台湾": 9,
-    "🇧🇾 BY": 9,
-    "🇷🇴 罗马尼亚": 9,
-    "🇵🇱 波兰": 7,
-    "🇫🇮 芬兰": 7,
-    "🇪🇪 EE": 6,
-    "🇮🇳 印度": 6,
-    "🇦🇱 AL": 5,
-    "🇸🇰 SK": 5,
-    "🇿🇦 南非": 4,
-    "🇰🇿 KZ": 4,
-    "🇦🇹 奥地利": 3,
-    "🇦🇪 阿联酋": 3,
-    "🇻🇳 越南": 3,
-    "🇮🇷 伊朗": 2,
-    "🇨🇱 CL": 2,
-    "🇺🇦 乌克兰": 2,
-    "🇳🇪 NE": 2,
-    "🇳🇬 NG": 2,
-    "🇨🇾 CY": 1,
-    "🇩🇰 DK": 1,
-    "🇱🇻 LV": 1,
-    "🇮🇩 印尼": 1,
-    "🇲🇾 马来西亚": 1,
-    "🇹🇭 泰国": 1,
+    "🇯🇵 日本": 12,
+    "🇭🇰 香港": 11,
+    "🇰🇷 韩国": 10,
+    "🇸🇪 瑞典": 7,
+    "🇧🇾 BY": 6,
+    "🇳🇪 NE": 4,
+    "🇫🇮 芬兰": 3,
+    "🇷🇴 罗马尼亚": 3,
+    "🇮🇳 印度": 3,
+    "🇦🇹 奥地利": 2,
+    "🇵🇱 波兰": 2,
+    "🇧🇷 巴西": 2,
+    "🇹🇼 台湾": 2,
+    "🇿🇦 南非": 2,
+    "🇲🇾 马来西亚": 2,
+    "🇦🇱 AL": 1,
     "🇦🇺 澳大利亚": 1,
-    "🇳🇴 NO": 1,
-    "🇨🇳 中国": 1
+    "🇰🇿 KZ": 1,
+    "🇦🇪 阿联酋": 1,
+    "🇨🇳 中国": 1,
+    "🇳🇴 NO": 1
   },
   "asia_reserved": {
-    "JP": 15,
-    "TW": 9,
-    "HK": 15,
+    "HK": 11,
+    "JP": 12,
+    "TW": 2,
     "KR": 10,
     "SG": 12,
-    "ID": 1,
-    "MY": 1,
-    "TH": 1,
-    "IN": 5,
-    "VN": 3
+    "IN": 3,
+    "MY": 2
   },
   "global_nodes": 200,
   "global_countries": {
-    "🇳🇱 荷兰": 33,
-    "🇨🇦 加拿大": 32,
-    "🇩🇪 德国": 17,
-    "🇯🇵 日本": 15,
-    "🇭🇰 香港": 15,
+    "🇳🇱 荷兰": 68,
+    "🇨🇦 加拿大": 26,
+    "🇪🇸 西班牙": 13,
+    "🇯🇵 日本": 12,
     "🇸🇬 新加坡": 12,
+    "🇭🇰 香港": 11,
+    "🇩🇪 德国": 10,
     "🇰🇷 韩国": 10,
     "🇬🇧 英国": 9,
-    "🇪🇸 西班牙": 9,
-    "🇫🇷 法国": 9,
-    "🇹🇼 台湾": 9,
+    "🇫🇷 法国": 8,
     "🇮🇹 意大利": 8,
-    "🇮🇳 印度": 5,
+    "🇸🇪 瑞典": 3,
     "🇨🇭 瑞士": 3,
-    "🇻🇳 越南": 3,
-    "🇧🇷 巴西": 2,
-    "🇸🇪 瑞典": 2,
-    "🇧🇾 BY": 2,
-    "🇵🇱 波兰": 2,
-    "🇮🇩 印尼": 1,
-    "🇲🇾 马来西亚": 1,
-    "🇹🇭 泰国": 1
+    "🇮🇳 印度": 3,
+    "🇹🇼 台湾": 2,
+    "🇲🇾 马来西亚": 2
   },
   "global_top10": [
     {
       "name": "🇨🇦 加拿大 01",
-      "type": "vless",
-      "delay": 100
+      "type": "ss",
+      "delay": 66
     },
     {
       "name": "🇨🇦 加拿大 02",
-      "type": "vmess",
-      "delay": 100
+      "type": "ss",
+      "delay": 76
     },
     {
       "name": "🇨🇦 加拿大 03",
-      "type": "vless",
-      "delay": 114
+      "type": "ss",
+      "delay": 78
     },
     {
       "name": "🇨🇦 加拿大 04",
-      "type": "vless",
-      "delay": 116
+      "type": "vmess",
+      "delay": 82
     },
     {
       "name": "🇨🇦 加拿大 05",
       "type": "vmess",
-      "delay": 117
+      "delay": 82
     },
     {
       "name": "🇨🇦 加拿大 06",
-      "type": "vless",
-      "delay": 120
+      "type": "vmess",
+      "delay": 84
     },
     {
       "name": "🇨🇦 加拿大 07",
-      "type": "vless",
-      "delay": 121
+      "type": "ss",
+      "delay": 90
     },
     {
       "name": "🇨🇦 加拿大 08",
-      "type": "vmess",
-      "delay": 122
+      "type": "vless",
+      "delay": 92
     },
     {
       "name": "🇨🇦 加拿大 09",
-      "type": "vless",
-      "delay": 150
+      "type": "trojan",
+      "delay": 100
     },
     {
-      "name": "🇧🇷 巴西 01",
-      "type": "vless",
-      "delay": 157
+      "name": "🇨🇦 加拿大 10",
+      "type": "trojan",
+      "delay": 100
     }
   ],
-  "fastest_ms": 24,
-  "median_ms": 572,
+  "fastest_ms": 20,
+  "median_ms": 326,
   "countries": {
     "🇺🇸 美国": 100,
-    "🇳🇱 荷兰": 33,
-    "🇨🇦 加拿大": 32,
-    "🇩🇪 德国": 17,
-    "🇯🇵 日本": 15,
-    "🇭🇰 香港": 15,
+    "🇳🇱 荷兰": 68,
+    "🇨🇦 加拿大": 26,
+    "🇪🇸 西班牙": 13,
+    "🇯🇵 日本": 12,
     "🇸🇬 新加坡": 12,
+    "🇭🇰 香港": 11,
+    "🇩🇪 德国": 10,
     "🇰🇷 韩国": 10,
     "🇬🇧 英国": 9,
-    "🇪🇸 西班牙": 9,
-    "🇫🇷 法国": 9,
-    "🇹🇼 台湾": 9,
+    "🇫🇷 法国": 8,
     "🇮🇹 意大利": 8,
-    "🇮🇳 印度": 5,
+    "🇸🇪 瑞典": 3,
     "🇨🇭 瑞士": 3,
-    "🇻🇳 越南": 3,
-    "🇧🇷 巴西": 2,
-    "🇸🇪 瑞典": 2,
-    "🇧🇾 BY": 2,
-    "🇵🇱 波兰": 2,
-    "🇮🇩 印尼": 1,
-    "🇲🇾 马来西亚": 1,
-    "🇹🇭 泰国": 1
+    "🇮🇳 印度": 3,
+    "🇹🇼 台湾": 2,
+    "🇲🇾 马来西亚": 2
   },
   "protocols": {
-    "vmess": 43,
-    "ss": 136,
-    "hysteria2": 22,
-    "vless": 77,
-    "trojan": 22
+    "ss": 156,
+    "trojan": 55,
+    "vless": 37,
+    "vmess": 31,
+    "hysteria2": 21
   },
   "sources": [
     {
@@ -180,19 +152,19 @@
     },
     {
       "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/refs/heads/main/config/clash.yaml",
-      "nodes": 2654
+      "nodes": 0
     },
     {
       "url": "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml",
-      "nodes": 31
+      "nodes": 35
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt",
-      "nodes": 96
+      "nodes": 97
     },
     {
       "url": "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
-      "nodes": 3
+      "nodes": 13
     },
     {
       "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
@@ -200,11 +172,11 @@
     },
     {
       "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-      "nodes": 4428
+      "nodes": 4430
     },
     {
       "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
-      "nodes": 377
+      "nodes": 366
     },
     {
       "url": "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
@@ -212,7 +184,7 @@
     },
     {
       "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml",
-      "nodes": 110
+      "nodes": 106
     },
     {
       "url": "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml",
@@ -224,112 +196,76 @@
     },
     {
       "url": "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/main/sub/mix",
-      "nodes": 896
+      "nodes": 873
     },
     {
       "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
-      "nodes": 119
+      "nodes": 78
     },
     {
       "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-      "nodes": 11
+      "nodes": 13
     },
     {
       "url": "YouTube",
-      "nodes": 2760
+      "nodes": 0
     }
   ],
   "top10": [
     {
       "name": "🇺🇸 美国 01",
-      "type": "vmess",
-      "delay": 24
+      "type": "ss",
+      "delay": 20
     },
     {
       "name": "🇺🇸 美国 02",
       "type": "ss",
-      "delay": 37
+      "delay": 29
     },
     {
       "name": "🇺🇸 美国 03",
-      "type": "hysteria2",
-      "delay": 42
+      "type": "ss",
+      "delay": 31
     },
     {
       "name": "🇺🇸 美国 04",
       "type": "ss",
-      "delay": 44
+      "delay": 35
     },
     {
       "name": "🇺🇸 美国 05",
       "type": "ss",
-      "delay": 45
+      "delay": 36
     },
     {
       "name": "🇺🇸 美国 06",
-      "type": "vless",
-      "delay": 48
+      "type": "ss",
+      "delay": 38
     },
     {
       "name": "🇺🇸 美国 07",
-      "type": "vmess",
-      "delay": 54
+      "type": "ss",
+      "delay": 39
     },
     {
       "name": "🇺🇸 美国 08",
-      "type": "vmess",
-      "delay": 58
+      "type": "ss",
+      "delay": 42
     },
     {
       "name": "🇺🇸 美国 09",
-      "type": "vless",
-      "delay": 60
+      "type": "ss",
+      "delay": 44
     },
     {
       "name": "🇺🇸 美国 10",
-      "type": "vless",
-      "delay": 70
+      "type": "trojan",
+      "delay": 44
     }
   ],
   "youtube": {
-    "channels": [
-      {
-        "channel": "分享日记",
-        "id": "UC9m6Ozdr5LuK5nL8RTvVR6Q",
-        "videos": 5,
-        "share_nodes": 0,
-        "links": 30,
-        "latest": "【每日更新】560个免费节点 | v2ray/Clash/SSR 稳定 · 极速 · 4K（2026/11/23）"
-      }
-    ],
-    "subs": [
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1tcDz7mEPEps48nqPrsB-Bu85KDHmE_hJ&export=download&confirm=t",
-        "nodes": 562
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1RPeMwFMdgplFSaO2frVR1Xh_QWdYQRrH&export=download&confirm=t",
-        "nodes": 504
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1D69cV_dtYD_ghUHBshJJjMccT6azEmlJ&export=download&confirm=t",
-        "nodes": 589
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1M2aXf_fqMvpfHYLtCfB-nweDVPxX1vFf&export=download&confirm=t",
-        "nodes": 582
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1C4fj8_Ox5Jd8kzZhhxzMy5Bsh0mI3V2V&export=download&confirm=t",
-        "nodes": 523
-      }
-    ],
-    "nodes": 2760
+    "channels": [],
+    "nodes": 0
   },
-  "seconds": 374
+  "seconds": 290
 }
