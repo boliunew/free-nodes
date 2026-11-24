@@ -68,7 +68,7 @@ def channel_id(entry):
     m = re.search(r"(UC[\w-]{22})", entry)
     if m and "/channel/" in entry:
         return m.group(1)
-    page = get(entry if entry.startswith("http") else "https://www.youtube.com/" + entry.lstrip("/"))
+    page = get_retry(entry if entry.startswith("http") else "https://www.youtube.com/" + entry.lstrip("/"), must="UC")
     for pat in (r'"externalId":"(UC[\w-]{22})"', r'<meta itemprop="channelId" content="(UC[\w-]{22})"',
                 r'"channelId":"(UC[\w-]{22})"', r'"browseId":"(UC[\w-]{22})"'):
         m = re.search(pat, page)
@@ -77,9 +77,20 @@ def channel_id(entry):
     return None
 
 
+def get_retry(url, tries=4, must=None):
+    """YouTube 偶尔对 GitHub 服务器抽风，多试几次"""
+    import time
+    for i in range(tries):
+        t = get(url)
+        if t and (must is None or must in t):
+            return t
+        time.sleep(3 * (i + 1))
+    return ""
+
+
 def channel_feed(cid):
     """返回 [(频道名, 视频标题, 简介)]，最新在前"""
-    x = get(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}")
+    x = get_retry(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}", must="<entry>")
     if not x:
         return []
     author = html.unescape((re.search(r"<author>\s*<name>(.*?)</name>", x, re.S) or [None, cid])[1])
@@ -125,7 +136,34 @@ def harvest(text):
     return shares, urls
 
 
+CACHE = os.path.join(ROOT, "cache", "youtube.yaml")
+CACHE_DAYS = 3
+
+
 def collect(parse_any, parse_links):
+    """带兜底：这次一个都没抓到，就用最近一次成功的结果（3 天内）"""
+    import time, yaml
+    nodes, stats = _collect(parse_any, parse_links)
+    if nodes:
+        os.makedirs(os.path.dirname(CACHE), exist_ok=True)
+        with open(CACHE, "w", encoding="utf-8") as f:
+            yaml.safe_dump({"saved": int(time.time()), "proxies": nodes}, f, allow_unicode=True, sort_keys=False)
+        return nodes, stats
+    try:
+        d = yaml.safe_load(open(CACHE, encoding="utf-8"))
+        age = (time.time() - d["saved"]) / 86400
+        if age <= CACHE_DAYS:
+            print(f"📺 本次没抓到，改用 {age:.1f} 天前的缓存：{len(d['proxies'])} 个")
+            stats["from_cache"] = round(age, 1)
+            stats["nodes"] = len(d["proxies"])
+            return d["proxies"], stats
+        print(f"📺 缓存已过期（{age:.1f} 天），不使用")
+    except Exception:
+        pass
+    return nodes, stats
+
+
+def _collect(parse_any, parse_links):
     """主入口：返回 (节点列表, 统计信息)。parse_any / parse_links 由 collector.py 传入"""
     path = os.path.join(ROOT, "youtube.txt")
     if not os.path.exists(path):
