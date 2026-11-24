@@ -1,149 +1,155 @@
 {
-  "updated": "2026-11-23 23:58 UTC",
-  "candidates": 6807,
-  "alive_total": 563,
+  "updated": "2026-11-24 03:46 UTC",
+  "candidates": 7462,
+  "alive_total": 678,
   "alive": 300,
   "alive_countries": {
-    "🇺🇸 美国": 198,
-    "🇳🇱 荷兰": 90,
+    "🇺🇸 美国": 218,
+    "🇳🇱 荷兰": 97,
+    "🇨🇦 加拿大": 72,
     "🇸🇬 新加坡": 39,
-    "🇨🇦 加拿大": 37,
-    "🇪🇸 西班牙": 23,
-    "🇫🇷 法国": 21,
-    "🇩🇪 德国": 19,
-    "🇨🇭 瑞士": 18,
-    "🇷🇺 俄罗斯": 15,
-    "🇬🇧 英国": 14,
+    "🇩🇪 德国": 37,
+    "🇪🇸 西班牙": 28,
+    "🇯🇵 日本": 23,
+    "🇫🇷 法国": 22,
+    "🇨🇭 瑞士": 21,
+    "🇬🇧 英国": 17,
+    "🇭🇰 香港": 14,
     "🇮🇹 意大利": 12,
-    "🇯🇵 日本": 12,
-    "🇭🇰 香港": 11,
-    "🇰🇷 韩国": 10,
+    "🇵🇱 波兰": 12,
+    "🇷🇺 俄罗斯": 9,
+    "🇰🇷 韩国": 9,
     "🇸🇪 瑞典": 7,
     "🇧🇾 BY": 6,
-    "🇳🇪 NE": 4,
-    "🇫🇮 芬兰": 3,
-    "🇷🇴 罗马尼亚": 3,
-    "🇮🇳 印度": 3,
-    "🇦🇹 奥地利": 2,
-    "🇵🇱 波兰": 2,
+    "🇹🇼 台湾": 5,
+    "🇦🇹 奥地利": 3,
+    "🇿🇦 南非": 3,
+    "🇹🇷 土耳其": 3,
+    "🇫🇮 芬兰": 2,
     "🇧🇷 巴西": 2,
-    "🇹🇼 台湾": 2,
-    "🇿🇦 南非": 2,
+    "🇦🇺 澳大利亚": 2,
+    "🇮🇩 印尼": 2,
     "🇲🇾 马来西亚": 2,
+    "🇮🇳 印度": 2,
+    "🇷🇴 罗马尼亚": 2,
+    "🇮🇪 爱尔兰": 1,
+    "🇳🇴 NO": 1,
     "🇦🇱 AL": 1,
-    "🇦🇺 澳大利亚": 1,
-    "🇰🇿 KZ": 1,
-    "🇦🇪 阿联酋": 1,
     "🇨🇳 中国": 1,
-    "🇳🇴 NO": 1
+    "🇦🇪 阿联酋": 1,
+    "🇳🇪 NE": 1,
+    "🇻🇳 越南": 1
   },
   "asia_reserved": {
-    "HK": 11,
-    "JP": 12,
-    "TW": 2,
-    "KR": 10,
+    "JP": 15,
+    "TW": 5,
+    "HK": 14,
+    "KR": 9,
     "SG": 12,
-    "IN": 3,
-    "MY": 2
+    "ID": 2,
+    "MY": 2,
+    "IN": 2,
+    "VN": 1
   },
   "global_nodes": 200,
   "global_countries": {
-    "🇳🇱 荷兰": 68,
-    "🇨🇦 加拿大": 26,
-    "🇪🇸 西班牙": 13,
-    "🇯🇵 日本": 12,
+    "🇳🇱 荷兰": 58,
+    "🇨🇦 加拿大": 47,
+    "🇯🇵 日本": 15,
+    "🇭🇰 香港": 14,
     "🇸🇬 新加坡": 12,
-    "🇭🇰 香港": 11,
-    "🇩🇪 德国": 10,
-    "🇰🇷 韩国": 10,
-    "🇬🇧 英国": 9,
+    "🇪🇸 西班牙": 10,
+    "🇰🇷 韩国": 9,
+    "🇬🇧 英国": 8,
     "🇫🇷 法国": 8,
-    "🇮🇹 意大利": 8,
-    "🇸🇪 瑞典": 3,
-    "🇨🇭 瑞士": 3,
-    "🇮🇳 印度": 3,
-    "🇹🇼 台湾": 2,
-    "🇲🇾 马来西亚": 2
+    "🇩🇪 德国": 6,
+    "🇹🇼 台湾": 5,
+    "🇮🇩 印尼": 2,
+    "🇲🇾 马来西亚": 2,
+    "🇮🇳 印度": 2,
+    "🇮🇪 爱尔兰": 1,
+    "🇻🇳 越南": 1
   },
   "global_top10": [
     {
       "name": "🇨🇦 加拿大 01",
-      "type": "ss",
-      "delay": 66
+      "type": "vmess",
+      "delay": 67
     },
     {
       "name": "🇨🇦 加拿大 02",
-      "type": "ss",
-      "delay": 76
+      "type": "vmess",
+      "delay": 68
     },
     {
       "name": "🇨🇦 加拿大 03",
-      "type": "ss",
+      "type": "trojan",
       "delay": 78
     },
     {
       "name": "🇨🇦 加拿大 04",
-      "type": "vmess",
-      "delay": 82
+      "type": "trojan",
+      "delay": 78
     },
     {
       "name": "🇨🇦 加拿大 05",
-      "type": "vmess",
-      "delay": 82
+      "type": "trojan",
+      "delay": 79
     },
     {
       "name": "🇨🇦 加拿大 06",
-      "type": "vmess",
-      "delay": 84
+      "type": "trojan",
+      "delay": 79
     },
     {
       "name": "🇨🇦 加拿大 07",
-      "type": "ss",
-      "delay": 90
+      "type": "trojan",
+      "delay": 80
     },
     {
       "name": "🇨🇦 加拿大 08",
-      "type": "vless",
-      "delay": 92
+      "type": "trojan",
+      "delay": 81
     },
     {
       "name": "🇨🇦 加拿大 09",
-      "type": "trojan",
-      "delay": 100
+      "type": "vmess",
+      "delay": 82
     },
     {
       "name": "🇨🇦 加拿大 10",
       "type": "trojan",
-      "delay": 100
+      "delay": 82
     }
   ],
   "fastest_ms": 20,
-  "median_ms": 326,
+  "median_ms": 350,
   "countries": {
     "🇺🇸 美国": 100,
-    "🇳🇱 荷兰": 68,
-    "🇨🇦 加拿大": 26,
-    "🇪🇸 西班牙": 13,
-    "🇯🇵 日本": 12,
+    "🇳🇱 荷兰": 58,
+    "🇨🇦 加拿大": 47,
+    "🇯🇵 日本": 15,
+    "🇭🇰 香港": 14,
     "🇸🇬 新加坡": 12,
-    "🇭🇰 香港": 11,
-    "🇩🇪 德国": 10,
-    "🇰🇷 韩国": 10,
-    "🇬🇧 英国": 9,
+    "🇪🇸 西班牙": 10,
+    "🇰🇷 韩国": 9,
+    "🇬🇧 英国": 8,
     "🇫🇷 法国": 8,
-    "🇮🇹 意大利": 8,
-    "🇸🇪 瑞典": 3,
-    "🇨🇭 瑞士": 3,
-    "🇮🇳 印度": 3,
-    "🇹🇼 台湾": 2,
-    "🇲🇾 马来西亚": 2
+    "🇩🇪 德国": 6,
+    "🇹🇼 台湾": 5,
+    "🇮🇩 印尼": 2,
+    "🇲🇾 马来西亚": 2,
+    "🇮🇳 印度": 2,
+    "🇮🇪 爱尔兰": 1,
+    "🇻🇳 越南": 1
   },
   "protocols": {
-    "ss": 156,
-    "trojan": 55,
-    "vless": 37,
-    "vmess": 31,
-    "hysteria2": 21
+    "trojan": 53,
+    "ss": 146,
+    "vmess": 27,
+    "vless": 57,
+    "hysteria2": 16,
+    "anytls": 1
   },
   "sources": [
     {
@@ -156,7 +162,7 @@
     },
     {
       "url": "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml",
-      "nodes": 35
+      "nodes": 33
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt",
@@ -164,7 +170,7 @@
     },
     {
       "url": "https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt",
-      "nodes": 13
+      "nodes": 9
     },
     {
       "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/v2ray-base64.txt",
@@ -172,11 +178,11 @@
     },
     {
       "url": "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt",
-      "nodes": 4430
+      "nodes": 4454
     },
     {
       "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
-      "nodes": 366
+      "nodes": 365
     },
     {
       "url": "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
@@ -200,72 +206,108 @@
     },
     {
       "url": "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
-      "nodes": 78
+      "nodes": 110
     },
     {
       "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
-      "nodes": 13
+      "nodes": 12
     },
     {
       "url": "YouTube",
-      "nodes": 0
+      "nodes": 2773
     }
   ],
   "top10": [
     {
       "name": "🇺🇸 美国 01",
-      "type": "ss",
+      "type": "trojan",
       "delay": 20
     },
     {
       "name": "🇺🇸 美国 02",
-      "type": "ss",
-      "delay": 29
+      "type": "trojan",
+      "delay": 22
     },
     {
       "name": "🇺🇸 美国 03",
-      "type": "ss",
-      "delay": 31
+      "type": "trojan",
+      "delay": 22
     },
     {
       "name": "🇺🇸 美国 04",
-      "type": "ss",
-      "delay": 35
+      "type": "trojan",
+      "delay": 24
     },
     {
       "name": "🇺🇸 美国 05",
-      "type": "ss",
-      "delay": 36
+      "type": "trojan",
+      "delay": 28
     },
     {
       "name": "🇺🇸 美国 06",
       "type": "ss",
-      "delay": 38
+      "delay": 31
     },
     {
       "name": "🇺🇸 美国 07",
-      "type": "ss",
-      "delay": 39
+      "type": "trojan",
+      "delay": 44
     },
     {
       "name": "🇺🇸 美国 08",
       "type": "ss",
-      "delay": 42
+      "delay": 48
     },
     {
       "name": "🇺🇸 美国 09",
-      "type": "ss",
-      "delay": 44
+      "type": "trojan",
+      "delay": 50
     },
     {
       "name": "🇺🇸 美国 10",
       "type": "trojan",
-      "delay": 44
+      "delay": 51
     }
   ],
   "youtube": {
-    "channels": [],
-    "nodes": 0
+    "channels": [
+      {
+        "channel": "分享日记",
+        "id": "UC9m6Ozdr5LuK5nL8RTvVR6Q",
+        "videos": 5,
+        "share_nodes": 0,
+        "links": 30,
+        "latest": "【每日更新】530个免费节点 | v2ray/Clash/SSR 稳定 · 极速 · 4K（2026/11/24）"
+      }
+    ],
+    "subs": [
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1lkJWk6o0LhokzacSwgbb3AoFhj94jiwN&export=download&confirm=t",
+        "nodes": 536
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1tcDz7mEPEps48nqPrsB-Bu85KDHmE_hJ&export=download&confirm=t",
+        "nodes": 562
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1RPeMwFMdgplFSaO2frVR1Xh_QWdYQRrH&export=download&confirm=t",
+        "nodes": 504
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1D69cV_dtYD_ghUHBshJJjMccT6azEmlJ&export=download&confirm=t",
+        "nodes": 589
+      },
+      {
+        "channel": "分享日记",
+        "url": "https://drive.usercontent.google.com/download?id=1M2aXf_fqMvpfHYLtCfB-nweDVPxX1vFf&export=download&confirm=t",
+        "nodes": 582
+      }
+    ],
+    "nodes": 2773
   },
-  "seconds": 290
+  "seconds": 397
 }
