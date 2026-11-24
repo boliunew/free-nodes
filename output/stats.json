@@ -1,147 +1,150 @@
 {
-  "updated": "2026-11-24 23:22 UTC",
+  "updated": "2026-11-24 23:35 UTC",
   "candidates": 7666,
-  "alive_total": 633,
+  "alive_total": 619,
   "alive": 300,
   "alive_countries": {
-    "🇺🇸 美国": 212,
+    "🇺🇸 美国": 203,
     "🇳🇱 荷兰": 99,
-    "🇩🇪 德国": 40,
-    "🇨🇦 加拿大": 38,
+    "🇨🇦 加拿大": 44,
+    "🇩🇪 德国": 39,
     "🇸🇬 新加坡": 38,
-    "🇪🇸 西班牙": 25,
-    "🇬🇧 英国": 20,
-    "🇫🇷 法国": 20,
+    "🇪🇸 西班牙": 24,
     "🇨🇭 瑞士": 20,
-    "🇯🇵 日本": 19,
+    "🇬🇧 英国": 19,
+    "🇫🇷 法国": 18,
+    "🇯🇵 日本": 16,
     "🇭🇰 香港": 15,
     "🇮🇹 意大利": 12,
-    "🇵🇱 波兰": 12,
     "🇰🇷 韩国": 11,
     "🇷🇺 俄罗斯": 10,
+    "🇵🇱 波兰": 9,
     "🇧🇾 BY": 6,
+    "🇹🇼 台湾": 5,
     "🇸🇪 瑞典": 5,
     "🇦🇱 AL": 5,
-    "🇹🇼 台湾": 4,
     "🇿🇦 南非": 3,
-    "🇮🇳 印度": 3,
     "🇹🇷 土耳其": 3,
-    "🇰🇿 KZ": 2,
-    "🇳🇪 NE": 2,
+    "🇫🇮 芬兰": 2,
+    "🇷🇴 罗马尼亚": 2,
     "🇳🇬 NG": 2,
+    "🇳🇪 NE": 2,
     "🇮🇷 伊朗": 1,
-    "🇳🇴 NO": 1,
-    "🇫🇮 芬兰": 1,
-    "🇷🇴 罗马尼亚": 1,
-    "🇦🇪 阿联酋": 1,
     "🇦🇹 奥地利": 1,
-    "🇮🇩 印尼": 1
+    "🇳🇴 NO": 1,
+    "🇲🇾 马来西亚": 1,
+    "🇻🇳 越南": 1,
+    "🇦🇪 阿联酋": 1,
+    "🇮🇳 印度": 1
   },
   "asia_reserved": {
-    "HK": 15,
     "JP": 15,
-    "TW": 4,
+    "HK": 15,
     "KR": 10,
+    "TW": 5,
     "SG": 12,
-    "IN": 3,
-    "ID": 1
+    "MY": 1,
+    "VN": 1,
+    "IN": 1
   },
   "global_nodes": 200,
   "global_countries": {
-    "🇳🇱 荷兰": 67,
-    "🇨🇦 加拿大": 24,
-    "🇩🇪 德国": 18,
-    "🇭🇰 香港": 15,
+    "🇳🇱 荷兰": 72,
+    "🇨🇦 加拿大": 31,
+    "🇩🇪 德国": 19,
     "🇯🇵 日本": 15,
+    "🇭🇰 香港": 15,
     "🇸🇬 新加坡": 12,
-    "🇪🇸 西班牙": 11,
     "🇰🇷 韩国": 10,
-    "🇬🇧 英国": 9,
-    "🇫🇷 法国": 9,
-    "🇹🇼 台湾": 4,
-    "🇮🇳 印度": 3,
+    "🇫🇷 法国": 8,
+    "🇬🇧 英国": 5,
+    "🇹🇼 台湾": 5,
+    "🇪🇸 西班牙": 3,
     "🇮🇷 伊朗": 1,
-    "🇸🇪 瑞典": 1,
-    "🇮🇩 印尼": 1
+    "🇦🇹 奥地利": 1,
+    "🇲🇾 马来西亚": 1,
+    "🇻🇳 越南": 1,
+    "🇮🇳 印度": 1
   },
   "global_top10": [
     {
-      "name": "🇭🇰 香港 01",
-      "type": "ss",
-      "delay": 50
-    },
-    {
       "name": "🇨🇦 加拿大 01",
-      "type": "vmess",
-      "delay": 88
+      "type": "ss",
+      "delay": 62
     },
     {
       "name": "🇨🇦 加拿大 02",
-      "type": "vmess",
-      "delay": 104
+      "type": "vless",
+      "delay": 164
     },
     {
       "name": "🇨🇦 加拿大 03",
-      "type": "vmess",
-      "delay": 108
+      "type": "vless",
+      "delay": 187
     },
     {
       "name": "🇨🇦 加拿大 04",
       "type": "vmess",
-      "delay": 120
+      "delay": 195
     },
     {
       "name": "🇨🇦 加拿大 05",
-      "type": "vless",
-      "delay": 126
+      "type": "vmess",
+      "delay": 198
     },
     {
       "name": "🇨🇦 加拿大 06",
-      "type": "ss",
-      "delay": 150
+      "type": "vmess",
+      "delay": 206
     },
     {
       "name": "🇨🇦 加拿大 07",
-      "type": "ss",
-      "delay": 228
+      "type": "vmess",
+      "delay": 218
     },
     {
       "name": "🇨🇦 加拿大 08",
-      "type": "ss",
-      "delay": 236
+      "type": "vmess",
+      "delay": 242
     },
     {
       "name": "🇨🇦 加拿大 09",
       "type": "ss",
-      "delay": 238
+      "delay": 252
+    },
+    {
+      "name": "🇨🇦 加拿大 10",
+      "type": "trojan",
+      "delay": 252
     }
   ],
-  "fastest_ms": 22,
-  "median_ms": 446,
+  "fastest_ms": 36,
+  "median_ms": 506,
   "countries": {
     "🇺🇸 美国": 100,
-    "🇳🇱 荷兰": 67,
-    "🇨🇦 加拿大": 24,
-    "🇩🇪 德国": 18,
-    "🇭🇰 香港": 15,
+    "🇳🇱 荷兰": 72,
+    "🇨🇦 加拿大": 31,
+    "🇩🇪 德国": 19,
     "🇯🇵 日本": 15,
+    "🇭🇰 香港": 15,
     "🇸🇬 新加坡": 12,
-    "🇪🇸 西班牙": 11,
     "🇰🇷 韩国": 10,
-    "🇬🇧 英国": 9,
-    "🇫🇷 法国": 9,
-    "🇹🇼 台湾": 4,
-    "🇮🇳 印度": 3,
+    "🇫🇷 法国": 8,
+    "🇬🇧 英国": 5,
+    "🇹🇼 台湾": 5,
+    "🇪🇸 西班牙": 3,
     "🇮🇷 伊朗": 1,
-    "🇸🇪 瑞典": 1,
-    "🇮🇩 印尼": 1
+    "🇦🇹 奥地利": 1,
+    "🇲🇾 马来西亚": 1,
+    "🇻🇳 越南": 1,
+    "🇮🇳 印度": 1
   },
   "protocols": {
-    "ss": 173,
-    "vmess": 37,
-    "trojan": 43,
-    "hysteria2": 22,
-    "vless": 25
+    "ss": 169,
+    "vmess": 43,
+    "hysteria2": 20,
+    "vless": 21,
+    "trojan": 47
   },
   "sources": [
     {
@@ -213,93 +216,58 @@
     {
       "name": "🇺🇸 美国 01",
       "type": "ss",
-      "delay": 22
+      "delay": 36
     },
     {
       "name": "🇺🇸 美国 02",
       "type": "vmess",
-      "delay": 24
+      "delay": 37
     },
     {
       "name": "🇺🇸 美国 03",
-      "type": "vmess",
-      "delay": 28
+      "type": "hysteria2",
+      "delay": 46
     },
     {
       "name": "🇺🇸 美国 04",
-      "type": "ss",
-      "delay": 34
+      "type": "vless",
+      "delay": 50
     },
     {
       "name": "🇺🇸 美国 05",
-      "type": "ss",
-      "delay": 50
-    },
-    {
-      "name": "🇭🇰 香港 01",
-      "type": "ss",
-      "delay": 50
+      "type": "vmess",
+      "delay": 51
     },
     {
       "name": "🇺🇸 美国 06",
-      "type": "ss",
-      "delay": 52
+      "type": "vless",
+      "delay": 54
     },
     {
       "name": "🇺🇸 美国 07",
-      "type": "ss",
-      "delay": 73
+      "type": "vless",
+      "delay": 56
     },
     {
       "name": "🇺🇸 美国 08",
+      "type": "vless",
+      "delay": 58
+    },
+    {
+      "name": "🇨🇦 加拿大 01",
       "type": "ss",
-      "delay": 76
+      "delay": 62
     },
     {
       "name": "🇺🇸 美国 09",
       "type": "ss",
-      "delay": 78
+      "delay": 80
     }
   ],
   "youtube": {
-    "channels": [
-      {
-        "channel": "分享日记",
-        "id": "UC9m6Ozdr5LuK5nL8RTvVR6Q",
-        "videos": 5,
-        "share_nodes": 0,
-        "links": 30,
-        "latest": "【每日更新】530个免费节点 | v2ray/Clash/SSR 稳定 · 极速 · 4K（2026/11/24）"
-      }
-    ],
-    "subs": [
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1lkJWk6o0LhokzacSwgbb3AoFhj94jiwN&export=download&confirm=t",
-        "nodes": 536
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1tcDz7mEPEps48nqPrsB-Bu85KDHmE_hJ&export=download&confirm=t",
-        "nodes": 562
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1RPeMwFMdgplFSaO2frVR1Xh_QWdYQRrH&export=download&confirm=t",
-        "nodes": 504
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1D69cV_dtYD_ghUHBshJJjMccT6azEmlJ&export=download&confirm=t",
-        "nodes": 589
-      },
-      {
-        "channel": "分享日记",
-        "url": "https://drive.usercontent.google.com/download?id=1M2aXf_fqMvpfHYLtCfB-nweDVPxX1vFf&export=download&confirm=t",
-        "nodes": 582
-      }
-    ],
-    "nodes": 2773
+    "channels": [],
+    "nodes": 2773,
+    "from_cache": 0.0
   },
-  "seconds": 340
+  "seconds": 343
 }
