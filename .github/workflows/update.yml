@@ -2,8 +2,7 @@ name: 🛰️ 更新免费节点
 
 on:
   schedule:
-    - cron: "17 */3 * * *"     # 每 3 小时排一次（UTC）——GitHub 免费定时常延迟/跳过，多排几次才能保证一天跑够 4 次以上
-    - cron: "47 1,13 * * *"    # 额外保底两次
+    - cron: "17 20 * * 0"      # 每周日 20:17 UTC（太平洋时间周日中午左右）跑一次
   workflow_dispatch:            # 手动点 Run workflow 立即更新
   push:
     paths: [sources.txt, collector.py, youtube.txt, youtube.py]

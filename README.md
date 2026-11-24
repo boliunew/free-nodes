@@ -1,6 +1,6 @@
 # 🛰️ Free Nodes · 全球免费节点自动收集
 
-每 6 小时自动从 GitHub 公开节点池 + 📺 YouTube 节点频道抓取 → 用 **mihomo 内核真实测速** → 只留下能用的、最快的 → 生成两份 Clash Meta 订阅：**海外版**（排除美国）和**全部版**。
+每周自动从 GitHub 公开节点池 + 📺 YouTube 节点频道抓取 → 用 **mihomo 内核真实测速** → 只留下能用的、最快的 → 生成两份 Clash Meta 订阅：**海外版**（排除美国）和**全部版**。
 
 ## 📲 订阅地址
 
@@ -31,7 +31,7 @@
 
 - 加/删来源：编辑 `sources.txt`（保存后会自动跑一次）
 - 📺 加 YouTube 频道：编辑 `youtube.txt`，贴频道或任意一个视频链接就行，会自动跟踪该频道最新视频简介里的节点
-- 更新频率：`.github/workflows/update.yml` 里的 `cron`
+- 更新频率（默认每周日一次）：`.github/workflows/update.yml` 里的 `cron`
 - 保留数量 / 延迟上限 / 美国名额：同文件里的 `MAX_NODES`、`MAX_DELAY`、`US_CAP`
 - 立即更新：仓库 **Actions** → **🛰️ 更新免费节点** → **Run workflow**
 

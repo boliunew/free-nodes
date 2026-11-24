@@ -137,7 +137,7 @@ def harvest(text):
 
 
 CACHE = os.path.join(ROOT, "cache", "youtube.yaml")
-CACHE_DAYS = 3
+CACHE_DAYS = 10  # 一周跑一次，缓存要能撑过一周
 
 
 def collect(parse_any, parse_links):
